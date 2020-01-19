@@ -22,11 +22,19 @@ if ("serviceWorker" in navigator) {
 
 // place your code below
 
-//Crossing and uncrossing list positions
+// List manipulations
 const toBuyList = document.querySelector('.to-buy__list--js');
 
 toBuyList.addEventListener("click", e => {
+
+  //Crossing and uncrossing list positions
   if (e.target.className.includes('list-position__name')) {
     e.target.classList.toggle('line-through');
   }
+
+  // Removing position in list
+  if(e.target.className.includes('delete')) {
+    e.target.parentElement.remove()
+  }
+
 });
