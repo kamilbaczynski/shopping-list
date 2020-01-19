@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +14,10 @@
     <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
     <meta property="og:url" content="" />
     <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
+    <meta
+      property="og:image"
+      content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
+    />
 
     <link rel="manifest" href="manifest.json" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -23,17 +26,73 @@
       sizes="192x192"
       href="assets/pwa/icons/icon-192x192.png"
     />
-
     <link
       rel="icon"
       type="image/png"
       href="assets/pwa/icons/icon-192x192.png"
     />
-
     <link rel="stylesheet" href="css/main.css" />
   </head>
+
   <body>
-    <h1>Hello world - with simple PWA support!</h1>
+    <main>
+      <h1 class="header">Lista zakupów</h1>
+
+      <form class="form">
+
+        <p class="form__input">
+
+          <input type="text" name="product" id="product" />
+          <label for="product"></label>
+
+        </p>
+
+        <p class="form__input">
+
+          <input type="submit" name="submit" id="add" />
+          <label for="add"></label>
+
+        </p>
+        
+      </form>
+
+      <section class="to-buy">
+        <h2 class="to-buy__title">Do kupienia</h2>
+
+        <ul class="to-buy__list">
+
+          <li class="to-buy__list--item list-position">
+
+            <span class="list-position__name">mleko</span>  
+            <a class="list-position__delete" href="#">x</a> 
+
+          </li>
+
+          <li class="to-buy__list--item list-position">
+
+            <span class="list-position__name">chleb</span>
+            <a class="list-position__delete" href="#">x</a>
+
+          </li>
+
+          <li class="to-buy__list--item list-position">
+
+            <span class="list-position__name">mydło</span>
+            <a class="list-position__delete" href="#">x</a>
+
+          </li>
+
+          <li class="to-buy__list--item list-position">
+
+            <span class="list-position__name">przyprawy</span>
+            <a class="list-position__delete" href="#">x</a>
+
+          </li>
+
+        </ul>
+
+      </section>
+    </main>
 
     <script src="js/main.js"></script>
   </body>
