@@ -25,9 +25,13 @@ main {
   margin: auto;
 }
 
-.form {
+.add-element {
 
-  &__input {
+  &__text-input {
+    display: inline-block;
+  }
+
+  &__button {
     display: inline-block;
   }
 

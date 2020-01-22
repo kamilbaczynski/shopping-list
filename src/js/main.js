@@ -22,19 +22,39 @@ if ("serviceWorker" in navigator) {
 
 // place your code below
 
+
 // List manipulations
 const toBuyList = document.querySelector('.to-buy__list--js');
 
 toBuyList.addEventListener("click", e => {
 
-  //Crossing and uncrossing list positions
+  //Crossing and uncrossing name of list element
   if (e.target.className.includes('list-position__name')) {
     e.target.classList.toggle('line-through');
   }
-
-  // Removing position in list
-  if(e.target.className.includes('delete')) {
+  // Removing list element
+  else if(e.target.className = 'delete') {
     e.target.parentElement.remove()
   }
 
+});
+
+// Adding element to list
+const addForm = document.querySelector('.add-element');
+
+addForm.addEventListener('submit', e => {
+
+  e.preventDefault();
+
+  const input = document.querySelector('.add-element__text-input--input');
+
+  toBuyList.innerHTML += `
+    <li class="to-buy__list--item list-position">
+      <span class="list-position__name">${input.value}</span>  
+      <a class="list-position__delete" href="#">x</a> 
+    </li>
+  `;
+
+  input.value = '';
+  
 });
