@@ -33,7 +33,7 @@ toBuyList.addEventListener("click", e => {
     e.target.classList.toggle('line-through');
   }
   // Removing list element
-  else if(e.target.className = 'delete') {
+  else if(e.target.className === 'list-position__delete') {
     e.target.parentElement.remove()
   }
 
