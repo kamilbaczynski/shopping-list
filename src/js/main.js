@@ -63,3 +63,23 @@ addForm.addEventListener('submit', e => {
   }
 
 });
+
+//Pop-up opening
+const popUp = document.querySelector('.pop-up');
+const deleteBtn = document.querySelector('.delete-button');
+
+deleteBtn.addEventListener('click', e => {
+  popUp.style.display = 'block';
+});
+
+//Closing pop-up and removing all list elements
+popUp.addEventListener('click', e => {
+
+  if(e.target.className === 'pop-up' || e.target.className === 'pop-up__window--link-save') {
+    popUp.style.display = 'none';
+  } else if (e.target.className === 'pop-up__window--link-delete') {
+    popUp.style.display = 'none';
+    toBuyList.innerHTML = '';
+  }
+
+});

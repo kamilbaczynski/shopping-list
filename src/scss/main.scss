@@ -22,6 +22,7 @@ main {
   justify-content: center;
   align-items: center;
   max-width: 500px;
+  height: 100%;
   margin: auto;
 }
 
@@ -38,6 +39,8 @@ main {
 }
 
 .to-buy {
+
+  margin-bottom: 20px;
 
   &__title {
 
@@ -79,4 +82,35 @@ main {
 
 .line-through {
   text-decoration: line-through;
+}
+
+
+
+.pop-up {
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  &__window {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: auto;
+    background-color: white;
+    color: black;
+    min-width: 250px;
+    min-height: 100px;
+
+    &--para {
+      margin: 0;
+    }
+
+    
+  }
 }
