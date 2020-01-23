@@ -48,13 +48,18 @@ addForm.addEventListener('submit', e => {
 
   const input = document.querySelector('.add-element__text-input--input');
 
-  toBuyList.innerHTML += `
+  //Input value can't be empty string
+  if (input.value !== '') {
+
+    toBuyList.innerHTML += `
     <li class="to-buy__list--item list-position">
       <span class="list-position__name">${input.value}</span>  
       <a class="list-position__delete" href="#">x</a> 
     </li>
-  `;
+    `;
 
-  input.value = '';
-  
+    input.value = '';
+
+  }
+
 });
