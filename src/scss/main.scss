@@ -34,15 +34,7 @@ body {
 
 }
 
-main {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  max-width: 500px;
-  height: 100%;
-  margin: auto;
-}
+
 
 .add-element {
 
@@ -60,7 +52,7 @@ main {
 .to-buy {
 
   width: 100%;
-  padding: 10px;
+  padding: 10px 10px 60px 10px;
   
 
   &__title {
@@ -143,7 +135,34 @@ main {
     &--para {
       margin: 0;
     }
-
-    
   }
+}
+
+.delete-all {
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  
+
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 55px;
+  min-width: 100%;
+
+  
+  display: flex;
+  justify-content: center;
+
+
+  &__button {
+    
+    margin: 10px;
+    background: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+
+  }
+
+
 }

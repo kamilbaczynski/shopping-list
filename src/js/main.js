@@ -77,7 +77,7 @@ addForm.addEventListener('submit', e => {
 
 //Pop-up opening
 const popUp = document.querySelector('.pop-up');
-const deleteBtn = document.querySelector('.delete-button');
+const deleteBtn = document.querySelector('.delete-all__button');
 
 deleteBtn.addEventListener('click', e => {
   popUp.style.display = 'block';
@@ -103,11 +103,15 @@ popUp.addEventListener('click', e => {
 function handleDeleteBtnVis() {
 
   let listElements = document.querySelectorAll('.to-buy__list--item').length;
+  let btnBackground = document.querySelector('.delete-all');
 
   if (listElements < 1) {
-    deleteBtn.style.display = 'none'
+    deleteBtn.style.display = 'none';
+    btnBackground.style.display = 'none';
+
   } else {
     deleteBtn.style.display = 'inline-block'
+    btnBackground.style.display = 'flex';
   }
 
 }
