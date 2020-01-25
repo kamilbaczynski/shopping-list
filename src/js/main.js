@@ -31,7 +31,11 @@ toBuyList.addEventListener("click", e => {
   //Crossing and uncrossing name of list element
   if (e.target.className.includes('list-element__name')) {
     e.target.classList.toggle('line-through');
+  } 
+  else if (e.target.className.includes('to-buy__list--item')) {
+    e.target.firstElementChild.classList.toggle('line-through');
   }
+  
   // Removing list element
   else if(e.target.className === 'list-element__delete') {
     e.target.parentElement.remove()
