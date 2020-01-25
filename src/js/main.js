@@ -58,7 +58,7 @@ addForm.addEventListener('submit', e => {
     toBuyList.innerHTML += `
     <li class="to-buy__list--item list-element">
       <span class="list-element__name">${input.value}</span>  
-      <a class="list-element__delete" href="#">x</a> 
+      <a class="list-element__delete" href="#">X</a> 
     </li>
     `;
 
