@@ -29,11 +29,11 @@ const toBuyList = document.querySelector('.to-buy__list--js');
 toBuyList.addEventListener("click", e => {
   
   //Crossing and uncrossing name of list element
-  if (e.target.className.includes('list-position__name')) {
+  if (e.target.className.includes('list-element__name')) {
     e.target.classList.toggle('line-through');
   }
   // Removing list element
-  else if(e.target.className === 'list-position__delete') {
+  else if(e.target.className === 'list-element__delete') {
     e.target.parentElement.remove()
   }
 
@@ -56,9 +56,9 @@ addForm.addEventListener('submit', e => {
   if (input.value !== '') {
 
     toBuyList.innerHTML += `
-    <li class="to-buy__list--item list-position">
-      <span class="list-position__name">${input.value}</span>  
-      <a class="list-position__delete" href="#">x</a> 
+    <li class="to-buy__list--item list-element">
+      <span class="list-element__name">${input.value}</span>  
+      <a class="list-element__delete" href="#">x</a> 
     </li>
     `;
 
