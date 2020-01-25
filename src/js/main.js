@@ -27,7 +27,7 @@ if ("serviceWorker" in navigator) {
 const toBuyList = document.querySelector('.to-buy__list--js');
 
 toBuyList.addEventListener("click", e => {
-
+  
   //Crossing and uncrossing name of list element
   if (e.target.className.includes('list-position__name')) {
     e.target.classList.toggle('line-through');
@@ -37,7 +37,10 @@ toBuyList.addEventListener("click", e => {
     e.target.parentElement.remove()
   }
 
+  handleDeleteBtnVis();
+
 });
+
 
 // Adding element to list
 const addForm = document.querySelector('.add-element');
@@ -47,6 +50,7 @@ addForm.addEventListener('submit', e => {
   e.preventDefault();
 
   const input = document.querySelector('.add-element__text-input--input');
+
 
   //Input value can't be empty string
   if (input.value !== '') {
@@ -62,7 +66,10 @@ addForm.addEventListener('submit', e => {
 
   }
 
+  handleDeleteBtnVis();
+
 });
+
 
 //Pop-up opening
 const popUp = document.querySelector('.pop-up');
@@ -72,6 +79,7 @@ deleteBtn.addEventListener('click', e => {
   popUp.style.display = 'block';
 });
 
+
 //Closing pop-up and removing all list elements
 popUp.addEventListener('click', e => {
 
@@ -80,6 +88,23 @@ popUp.addEventListener('click', e => {
   } else if (e.target.className === 'pop-up__window--link-delete') {
     popUp.style.display = 'none';
     toBuyList.innerHTML = '';
-  }
+  };
+
+  handleDeleteBtnVis();
 
 });
+
+
+//Function responsabile for hidding delete-all-button when there is no any elements in list
+function handleDeleteBtnVis() {
+
+  let listElements = document.querySelectorAll('.to-buy__list--item').length;
+
+  if (listElements < 1) {
+    deleteBtn.style.display = 'none'
+  } else {
+    deleteBtn.style.display = 'inline-block'
+  }
+
+}
+
