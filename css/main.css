@@ -324,6 +324,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
   color: white;
+  min-height: 100vh;
   padding: 10px 10px 10px 10px; }
 
 .header {
@@ -455,9 +456,7 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   height: 55px;
   min-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
