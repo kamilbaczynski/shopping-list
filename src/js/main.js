@@ -98,6 +98,7 @@ function handleVisibleDeleteAllButton() {
 
   let listElements = document.querySelectorAll('.to-buy__list--item').length;
   let btnBackground = document.querySelector('.delete-all');
+  
 
   if (listElements < 1) {
     deleteBtn.style.display = 'none';
@@ -180,3 +181,5 @@ popUp.addEventListener('click', e => {
   handleVisibleDeleteAllButton();
 
 });
+
+handleVisibleDeleteAllButton();
