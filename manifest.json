@@ -1,8 +1,8 @@
 {
   "name": "Shopping List",
   "short_name": "To-Buy-List",
-  "theme_color": "#606060",
-  "background_color": "#1484dd",
+  "theme_color": "#777777",
+  "background_color": "#000000",
   "display": "standalone",
   "Scope": "/shopping-list/",
   "start_url": "/shopping-list/",
