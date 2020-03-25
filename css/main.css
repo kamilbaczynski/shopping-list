@@ -326,6 +326,9 @@ body {
   color: white;
   min-height: 100vh;
   padding: 10px 10px 10px 10px; }
+  @media (min-width: 801px) {
+    body {
+      background-size: cover; } }
 
 .header {
   text-align: center; }
